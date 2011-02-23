@@ -2,4 +2,6 @@
 *.nfs*
 *.log
 *~
+*.o
+
 git.bash
