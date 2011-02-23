@@ -14,7 +14,6 @@ int main(){
 
 	wczytaj_macierz(n,macierz);
      
-	printf("%f", wyznacznik(n, macierz) );
-	printf("\n");
+	printf("%f\n", wyznacznik(n, macierz) );
 	return 0;
 }
