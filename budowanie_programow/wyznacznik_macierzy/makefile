@@ -1,16 +1,15 @@
-CFLAGS = -Wall
+CFLAGS = -Wall -ansi
 
-full: testowy test
+default: clean main test
+	rm -f *.o *~
 
-testowy: main.o wczytaj_macierz.o wyznacznik.o
-	cc -o testowy main.c wczytaj_macierz.o wyznacznik.o
-
-main.o: main.c definicje.h
+main: main.o wczytaj_macierz.o wyznacznik.o
+	cc -o main main.c wczytaj_macierz.o wyznacznik.o
 
 test:
 	echo "2 2 5 4 1" > a.in
-	./testowy < a.in
-	rm a.in
+	./main < a.in
+	rm *.in
 
 clean:
-	rm -f *.o testowy *~
+	rm -f *.o main *~
