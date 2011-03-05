@@ -1,7 +1,7 @@
 CFLAGS = -Wall -ansi
 
 default: clear test
-	rm -f *.o *~
+	rm -f *.o *~ main
 
 main: main.o lib.o
 	cc -o main main.o lib.o
