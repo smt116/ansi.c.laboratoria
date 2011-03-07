@@ -4,7 +4,7 @@ default: clear test
 	rm -f *.o *~ main
 
 main: main.o lib.o
-	cc -o main main.o lib.o
+	cc -o main main.o lib.o -lm
 
 clear:
 	clear
