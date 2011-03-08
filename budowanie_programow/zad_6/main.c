@@ -5,7 +5,7 @@
 int main(){
 	double x = pobierz_rzeczywista();
 
-	/* Funkcja wypisze pierwiastek i odwrotnosc */
+	/* Funkcja wypisze pierwiastek */
 	pierwiastek(x);
 
 	return 0;
