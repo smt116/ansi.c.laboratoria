@@ -3,6 +3,10 @@ CFLAGS = -Wall -ansi
 main: main.o lib.o
 	cc -o main main.o lib.o -lm
 
+main.o: main.c lib.o lib.h
+
+lib.o: lib.c
+
 clean:
 	rm -f *.o *~ *.swp main *.in
 
