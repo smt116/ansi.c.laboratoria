@@ -2,11 +2,11 @@
  * smt116@gmail.com
  */
 #include"lib.h"
-int main(){
-	double x = pobierz_rzeczywista();
 
-	/* Funkcja wypisze pierwiastek */
-	pierwiastek(x);
+int main(){
+	double x = pobierz_rzeczywista("Podaj ");
+
+	wypisz_pierwiastek(x);
 
 	return 0;
 }

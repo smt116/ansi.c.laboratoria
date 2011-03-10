@@ -3,6 +3,7 @@
  */
 #include<stdio.h>
 #include<math.h>
+
 void wejs_dane(double wejs[3]){
 	/* dane wejsciowe */
 	printf("Wartosc poczatkowa: ");

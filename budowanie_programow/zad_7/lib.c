@@ -1,15 +1,18 @@
-/* Maciej Małecki
+/* 
+ * Maciej Małecki
  * smt116@gmail.com
  */
 #include<stdio.h>
 #include<math.h>
-double pobierz_rzeczywista(void){
+
+double pobierz_rzeczywista(char *prompt){
 	double x;
-	printf("Podaj liczbe rzeczywista: ");
+	printf(prompt);
 	scanf("%lf",&x);
 
 	return x;
 }
+
 void pierwiastek_i_odwrotnosc_R(double x){
 	double p = sqrt(x);
 	if( x<0 ){

@@ -3,6 +3,7 @@
  * smt116@gmail.com
  */
 #include<stdio.h>
+
 void wczytaj(int n, double tab[n]){
 	/* takie rozwiazanie umozliwa pozniejsza modyfikacje
 	 * i zwiekszenie ilosci danych ktore chcemy uzyskac
