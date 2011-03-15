@@ -5,12 +5,12 @@
 #include<stdio.h>
 #include<time.h>
 
-void pobierz_wiek(char *prompt, int wiek[2]){
+void pobierz_wiek(char *prompt, int wiek[3]){
 	printf(prompt);
 	scanf("%i-%i-%i", &wiek[0], &wiek[1], &wiek[2]);
 }
 
-void wiek_na_sekundy(int wiek[2]){
+void wiek_na_sekundy(int wiek[3]){
 	time_t czas_aktualny, 
 	       czas_urodzenia;
 	struct tm*data_urodzenia;
