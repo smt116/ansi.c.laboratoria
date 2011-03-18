@@ -6,8 +6,8 @@
 
 int main()
 {
-    pobierz_dane("Podaj dane a i b: a b ");
+    pobierz_dane("Podaj dane: a b ");
     oblicz_wynik();
-    pokaz_wynik("ax=b => x= %lf\n");
+    pokaz_wynik("%lf * x = %lf => x= %lf\n");
     return 0;
 }

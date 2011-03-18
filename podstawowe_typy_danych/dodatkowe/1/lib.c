@@ -16,5 +16,5 @@ void oblicz_wynik(void)
 }
 void pokaz_wynik(char *prompt)
 {
-    printf(prompt, x);
+    printf(prompt, a, b, x);
 }
