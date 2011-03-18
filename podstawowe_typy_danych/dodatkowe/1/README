@@ -1,0 +1,4 @@
+Napisz program, ktory bedzie liczyl wynik dla rownania ax=b przy danym a i b. Funkcje w programie powinny byc typu void:
+void pobierz_dane(...);
+void oblicz_wynik(...);
+void pokaz_wynik(...);

@@ -4,13 +4,17 @@
  */
 #include"lib.h"
 #include<stdio.h>
-int main(){
-	double wzrost;
-	int miara;
 
-	wzrost = wczytaj_liczbe("Podaj wzrost: ");
-	miara = wczytaj_miare("Podaj miare: ");
-	przelicz(wzrost, miara);
+/* biblioteka w ktorej jest pobierz_rzeczywista(); */
+#include"../libs/input.h"
+int main()
+{
+    double wzrost;
+    int miara;
 
-	return 0;
+    wzrost = pobierz_rzeczywista("Podaj wzrost: ");
+    miara = wczytaj_miare("Podaj miare: ");
+    przelicz(wzrost, miara);
+
+    return 0;
 }

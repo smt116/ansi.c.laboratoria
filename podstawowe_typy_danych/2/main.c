@@ -4,10 +4,11 @@
  */
 #include"lib.h"
 
-int main(){
-	int kod;
-	kod = wczytaj_kod("Podaj kod znaku ");
-	kod_na_znak(kod);
+int main()
+{
+    int kod;
+    kod = wczytaj_kod("Podaj kod znaku ");
+    kod_na_znak(kod);
 
-	return 0;
+    return 0;
 }

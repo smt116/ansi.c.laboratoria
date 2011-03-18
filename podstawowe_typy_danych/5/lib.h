@@ -4,7 +4,7 @@
  */
 #ifndef _LIB_ZAD_5
 #define _LIB_ZAD_5
-double wczytaj_liczbe(char *);
+double pobierz_rzeczywista(char *);
 char wczytaj_miare(char *);
 void przelicz(double, int);
 #endif

@@ -1,0 +1,5 @@
+LIBS - zawiera funkcje uniwersalne z ktorych mozna korzystac przy tworzeniu kolejnych programow. Z czasem bedzie rozbudowana
+
+DODATKOWE - zawiera zadania domowe, ktore nie obejmuja tresci z strony internetowej i inne zadania dodatkowe
+
+SZABLON - zawiera pliki z podstawowymi plikami main, lib i Makefile do wyedytowania
