@@ -4,6 +4,7 @@
  */
 #include <stdio.h>
 double a, b, x;
+int dzielenie_przez_zero;
 
 void pobierz_dane(char *prompt)
 {
@@ -12,9 +13,16 @@ void pobierz_dane(char *prompt)
 }
 void oblicz_wynik(void)
 {
-    x = b / a;
+    if (a != 0) {
+	x = b / a;
+	dzielenie_przez_zero = 0;
+    } else
+	dzielenie_przez_zero = 1;
 }
-void pokaz_wynik(char *prompt)
+void pokaz_wynik(char *prompt, char *error)
 {
-    printf(prompt, a, b, x);
+    if (dzielenie_przez_zero)
+	printf(error);
+    else
+	printf(prompt, a, b, x);
 }
