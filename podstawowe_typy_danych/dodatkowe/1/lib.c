@@ -19,10 +19,12 @@ void oblicz_wynik(void)
     } else
 	dzielenie_przez_zero = 1;
 }
-void pokaz_wynik(char *prompt, char *error)
+void pokaz_wynik(char *prompt, char *prompt_blad, char *prompt_tozsamosc)
 {
     if (dzielenie_przez_zero)
-	printf(error);
-    else
+	printf(prompt_blad);
+    else if (x != 0)
 	printf(prompt, a, b, x);
+    else
+	printf(prompt_tozsamosc);
 }

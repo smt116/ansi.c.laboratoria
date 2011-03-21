@@ -6,5 +6,5 @@
 #define SMT__LOCAL_LIB
 void pobierz_dane(char *);
 void oblicz_wynik(void);
-void pokaz_wynik(char *, char *);
+void pokaz_wynik(char *, char *, char *);
 #endif
