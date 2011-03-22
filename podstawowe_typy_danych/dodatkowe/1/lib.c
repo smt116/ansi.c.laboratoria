@@ -4,6 +4,11 @@
  */
 #include <stdio.h>
 double a, b, x;
+/* zmianne uzywane do obliczenia
+ * funkcji liniowej ax=b. a i b jako zmienne
+ * pobierane, x jako zmienna do przechowywania
+ * wyniku*/
+
 int dzielenie_przez_zero;
 
 void pobierz_dane(char *prompt)
