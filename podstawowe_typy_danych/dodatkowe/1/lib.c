@@ -3,29 +3,20 @@
  * smt116@gmail.com
  */
 #include <stdio.h>
-double a, b, x;
-/* zmianne uzywane do obliczenia
- * funkcji liniowej ax=b. a i b jako zmienne
- * pobierane, x jako zmienna do przechowywania
- * wyniku*/
 
-int dzielenie_przez_zero;
-
-void pobierz_dane(char *prompt)
-{
+void pobierz_dane(char *prompt, double *a, double *b) {
     printf(prompt);
-    scanf("%lf %lf", &a, &b);
+    scanf("%lf %lf", a, b);
 }
-void oblicz_wynik(void)
-{
+void oblicz_wynik(double a, double b, double *x, int *dzielenie_przez_zero) {
     if (a != 0) {
-	x = b / a;
-	dzielenie_przez_zero = 0;
+	*x = b / a;
+	*dzielenie_przez_zero = 0;
     } else
-	dzielenie_przez_zero = 1;
+	*dzielenie_przez_zero = 1;
 }
-void pokaz_wynik(char *prompt, char *prompt_blad, char *prompt_tozsamosc)
-{
+void pokaz_wynik(char *prompt, char *prompt_blad, char *prompt_tozsamosc,
+		 double a, double b, double x, int dzielenie_przez_zero) {
     if (dzielenie_przez_zero)
 	printf(prompt_blad);
     else if (x != 0)
