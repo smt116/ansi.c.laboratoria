@@ -3,6 +3,7 @@
 *.log
 *~
 *.o
+_*
 
 git.bash
 clean.bash
