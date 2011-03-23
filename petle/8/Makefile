@@ -10,3 +10,9 @@ lib.o: lib.c
 clean:
 	rm -f *~ *.in *.out *.o main ~swp
 
+test: main
+	echo "4 *" > 1.in
+	echo "10 ^" > 2.in
+	echo "\n"
+	./main < 1.in
+	./main < 2.in
