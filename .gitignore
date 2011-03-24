@@ -5,5 +5,20 @@
 *.o
 _*
 
+petle/2/*
+petle/2/lib.c
+petle/2/lib.h
+petle/2/main.c
+
+petle/6/*
+petle/6/main.c
+petle/6/lib.c
+petle/6/lib.h
+
+petle/8/*
+petle/8/main.c
+petle/8/lib.c
+petle/8/lib.h
+
 git.bash
 clean.bash
