@@ -24,7 +24,7 @@ void ilosc_dodatnich(int n, double tab[n], int *dodatnie, char *prompt)
     int i;
 
     for (i = 0; i < n; i++) {
-	if (tab[i] >= 0) *dodatnie++;
+	if (tab[i] >= 0) *dodatnie += 1;
     }
 
     printf(prompt, *dodatnie);
