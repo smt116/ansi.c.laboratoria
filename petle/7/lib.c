@@ -3,14 +3,13 @@
  * smt116@gmail.com
  */
 #include<stdio.h>
-void wczytaj_wymiar(int *n, char *prompt)
-{
+
+void wczytaj_wymiar(int *n, char *prompt) {
     printf(prompt);
     scanf("%i", n);
 }
 
-void wczytaj_tablice(int n, double *tab, char *prompt)
-{
+void wczytaj_tablice(int n, double *tab, char *prompt) {
     int i;
 
     for (i = 0; i < n; i++) {
@@ -19,8 +18,7 @@ void wczytaj_tablice(int n, double *tab, char *prompt)
     }
 }
 
-void ilosc_dodatnich(int n, double tab[n], int *dodatnie, char *prompt)
-{
+void ilosc_dodatnich(int n, double tab[n], int *dodatnie, char *prompt) {
     int i;
 
     for (i = 0; i < n; i++) {

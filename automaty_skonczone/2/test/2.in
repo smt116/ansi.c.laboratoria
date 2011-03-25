@@ -1,0 +1,14 @@
+/*
+ * Maciej Małecki
+ * smt116@gmail.com
+ */
+#include "lib.h"
+// /* nie wiem czy to oki???? ****** /////// 
+// asdasd/*
+/* */
+
+int main() {
+    pobieranie_tekstu("Wpisz kod zrodlowy (ctrl+d konczy wpisywanie)\n");
+
+    return 0;
+}

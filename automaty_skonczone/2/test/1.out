@@ -1,0 +1,38 @@
+Wpisz kod zrodlowy (ctrl+d konczy wpisywanie)
+
+#include <stdio.h>
+#include "lib.h"
+
+void pobieranie_tekstu(char *prompt) {
+    printf(prompt);
+	    char znak;
+    znak = getchar();
+
+    while (znak != EOF) {
+	if (znak == '/) {
+	    usun_komentarze(&znak);
+	} 
+	else putchar(znak);
+
+	znak = getchar();
+    }
+}
+void usun_komentarze(char *znak) {
+    char znak1, znak2;
+    znak1 = *znak;
+    znak2 = getchar();
+
+    if(znak1 == '/ && znak2 == '/) {
+	    while(znak2=='\n'){
+	    znak2 = getchar();}
+    } else {
+	    if(znak2 == '*') {
+		    while(!(znak1=='*' && znak2=='/)){
+			    znak1 = znak2;
+			    znak2 = getchar();
+		    }
+	    } else {
+		    putchar(znak1);
+	    }
+    }
+}
