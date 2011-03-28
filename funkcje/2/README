@@ -1,0 +1,3 @@
+Program obliczajacy silnie iteracyjnie. Domyslnie liczy dla 10 
+pierwszych liczb naturalnych ale wystarczy usunac komentarze w main.c 
+zeby dostosowac program do liczenia dla konkretnego n.
