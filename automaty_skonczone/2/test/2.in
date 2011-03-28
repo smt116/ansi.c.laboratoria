@@ -1,14 +1,39 @@
-/*
- * Maciej Małecki
- * smt116@gmail.com
- */
-#include "lib.h"
-// /* nie wiem czy to oki???? ****** /////// 
-// asdasd/*
-/* */
-
-int main() {
-    pobieranie_tekstu("Wpisz kod zrodlowy (ctrl+d konczy wpisywanie)\n");
-
-    return 0;
-}
+    /*/**//*///*//?/*/*//1*/**/2?3?4?//5?*/?6?7?8*//*?**/
+    printf("");
+    printf("//   ");
+    printf(" /* */ ");
+    printf("\n");
+    printf(" // \n /* \n */ ");
+    cout<<" Bla // Bla Bla\n";
+    cout<<" Bla /* Bla // */ // Bla"<<endl;
+    / ala/ //alka
+    /* / ala/ // */
+    /ala*/
+    /ala*/* ala *./  */
+    // komentarz
+    // komentarz2 \
+    dalszy komentarzyk
+    / / ala ma kota
+    / * ala ma kota2 */
+    perl/*/*/*///*//*//*//**//*//*//*//
+    /*/* /* ///*//*//*//**//*//*//*//*/
+    komentarz // czy nie komentarz
+    *//.*/.**./
+    [SPAM]
+    /* costam costam costam
+    costam costam costam
+    costam costam // */
+    cout << "przyklad komentarza: /* test
+    test test test
+    */ ";
+    **************/**********************************/***********
+    /**/*
+    /*cout<<" Bla // Bla Bla\n";*/
+    /k\l
+    \
+    /
+    "//"
+    "/* */"
+    "//'\\/'\/'\/'\/'//\\\/\/''\\/\'/'\\/\\/\/\//\/'/'\\'/'/\'""/'\\/'\/'/'"?/''\"//'\/'\'/\''\\"'/'\'\/"
+    puts(" printf(" cout<<" bla "; "); ");
+    /*/**//*///*//?/*/*//8*/**/8?8?8?//8?*/?8?8?8*//*?**/

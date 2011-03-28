@@ -2,42 +2,13 @@
  * Maciej Małecki
  * smt116@gmail.com
  */
-#include <stdio.h>
 #include "lib.h"
+// /* nie wiem czy to oki???? ****** /////// 
+// asdasd/*
+/* */
 
-void pobieranie_tekstu(char *prompt) {
-    printf(prompt);
-	// cos tu nietak chyba
-    char znak;
-    znak = getchar();
+int main() {
+    pobieranie_tekstu("Wpisz kod zrodlowy (ctrl+d konczy wpisywanie)\n");
 
-    while (znak != EOF) {
-	if (znak == '/') {
-	    usun_komentarze(&znak);
-	} 
-	else putchar(znak);
-/* hmmm ciekawy jest *
-ten komentarz *
-aczkolwiek /* czy ja wiem.... */
-	znak = getchar();
-    }
-}
-void usun_komentarze(char *znak) {
-    char znak1, znak2;
-    znak1 = *znak;
-    znak2 = getchar();
-
-    if(znak1 == '/' && znak2 == '/') {
-	    while(znak2=='\n'){
-	    znak2 = getchar();}
-    } else {
-	    if(znak2 == '*') {
-		    while(!(znak1=='*' && znak2=='/')){
-			    znak1 = znak2;
-			    znak2 = getchar();
-		    }
-	    } else {
-		    putchar(znak1);
-	    }
-    }
+    return 0;
 }

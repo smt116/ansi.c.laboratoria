@@ -11,9 +11,5 @@ clean:
 	rm -f *~ *.in *.out *.o main ~swp
 
 test: main
-	./main < test/1.in > test/1.out
-	./main < test/2.in > test/2.out
-	echo "\n"
-	cat test/1.out
-	echo "\n"
-	cat test/2.out
+	./main < test/1.in
+	./main < test/2.in

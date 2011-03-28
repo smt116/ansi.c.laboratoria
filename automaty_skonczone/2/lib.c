@@ -12,10 +12,11 @@ void pobieranie_tekstu(char *prompt) {
     znak = getchar();
 
     while (znak != EOF) {
-	if (znak == '/') {
-	    usun_komentarze(&znak);
-	} else
-	    putchar(znak);
+	switch(znak) {
+	    case '/': usun_komentarze(&znak); break;
+	    case '"': usun_apostrofy(&znak); break;
+	    default: putchar(znak);
+	}
 
 	znak = getchar();
     }
@@ -40,4 +41,18 @@ void usun_komentarze(char *znak) {
 	    putchar(znak1);
 	}
     }
+}
+
+void usun_apostrofy(char *znak) {
+    char znak1, znak2;
+    znak1 = *znak;
+    znak2 = getchar();
+
+    while(!(znak1!='\\' && znak2=='"')) {
+	putchar(znak1);
+	znak1 = znak2;
+	znak2 = getchar();
+    }
+    putchar(znak1);
+    putchar(znak2);
 }

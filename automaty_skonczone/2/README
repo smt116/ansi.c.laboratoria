@@ -1,4 +1,2 @@
 Program usuwa komentarze z kodu zrodlowego. Obsluguje zarowno komentarze 
 jedno jak i wielolinijkowe
-
-ZAPOMNIAŁEM o czyms takim: printf(" /* */ ");.. program przez to nie jest skonczony! dokoncze go na dniach ;)
