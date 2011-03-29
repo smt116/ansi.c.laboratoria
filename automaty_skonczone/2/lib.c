@@ -13,7 +13,7 @@ void pobieranie_tekstu(char *prompt) {
 
     while (znak != EOF) {
 	switch(znak) {
-	    case '/': usun_komentarze(&znak); break;
+	    case '/': usun_komentarz(&znak); break;
 	    case '"': ignoruj_cudzyslow(&znak); break;
 	    default: putchar(znak); break;
 	}
@@ -22,11 +22,13 @@ void pobieranie_tekstu(char *prompt) {
     }
 }
 
-void usun_komentarze(char *znak) {
+void usun_komentarz(char *znak) {
     char znak1, znak2;
     znak1 = *znak;
     znak2 = getchar();
 
+    /* wlasciwie tutaj ladniej wygladalaby
+     * instrukcja case of... potem to zamienie */
     if (znak1 == '/' && znak2 == '/') {
 	while (znak2 != '\n') {
 	    znak2 = getchar();
