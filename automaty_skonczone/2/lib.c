@@ -14,8 +14,7 @@ void pobieranie_tekstu(char *prompt) {
     while (znak != EOF) {
 	switch(znak) {
 	    case '/': usun_komentarze(&znak); break;
-	    case '\'': ignoruj_przedzial(&znak, '\''); break;
-	    case '\"': ignoruj_przedzial(&znak, '\"'); break;
+	    case '"': ignoruj_cudzyslow(&znak); break;
 	    default: putchar(znak); break;
 	}
 
@@ -44,12 +43,12 @@ void usun_komentarze(char *znak) {
     }
 }
 
-void ignoruj_przedzial(char *znak, char przedzial) {
+void ignoruj_cudzyslow(char *znak) {
     char znak1, znak2;
     znak1 = *znak;
     znak2 = getchar();
 
-    while(!(znak1!='\\' && znak2==przedzial)) {
+    while(!(znak1!='\\' && znak2=='"')) {
 	putchar(znak1);
 	znak1 = znak2;
 	znak2 = getchar();
