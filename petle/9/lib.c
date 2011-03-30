@@ -2,18 +2,14 @@
  * Maciej Małecki
  * smt116@gmail.com
  */
-#include <stdio.h>
 #include "lib.h"
-void pobierz_dane(char *bufor[], unsigned int *ui, double *x, double *y)
-{
-    short komentarz;
-    komentarz = sscanf(*bufor, "%u %lf %lf", ui, x, y);
-    if (komentarz == 3) {
-	oblicz_dane(*ui, *x, *y);
-    }
-}
 
-void oblicz_dane(int ui, double x, double y)
+int otworz_plik(FILE * in_handle, char *argv[1])
 {
-    printf("%u %lf %lf\n", ui, x, y);
+    in_handle = fopen(argv[1], "r");
+    if (in_handle == NULL) {
+	printf("Poprawne wywolanie: ./main nazwa_pliku\n");
+	return 0;
+    } else
+	return 1;
 }

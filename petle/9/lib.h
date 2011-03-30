@@ -4,6 +4,8 @@
  */
 #ifndef SMT__LOCAL_LIB
 #define SMT__LOCAL_LIB
-void pobierz_dane(char *, unsigned int *, double *, double *);
-void oblicz_dane(int, double, double);
+
+#include<stdio.h>
+
+int otworz_plik(FILE *, char *argv[1]);
 #endif
