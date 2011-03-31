@@ -7,5 +7,7 @@
 
 #include<stdio.h>
 
-int otworz_plik(FILE *, char *argv[1]);
+int otworz_plik(FILE ** in_handle, char *argv[1]);
+void zamknij_plik(FILE ** in_handle);
+void error_plik(char *);
 #endif

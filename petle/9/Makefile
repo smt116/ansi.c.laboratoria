@@ -10,3 +10,5 @@ lib.o: lib.c
 clean:
 	rm -f *~ *.in *.out *.o main ~swp
 
+test: main
+	./main test

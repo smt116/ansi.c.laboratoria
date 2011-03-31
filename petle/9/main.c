@@ -4,16 +4,16 @@
  */
 #include "lib.h"
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     FILE *in_handle;
     char bufor[BUFSIZ];
 
-    if (otworz_plik(in_handle, &argv[1])) {
-	printf("Plik otwarty");
+    if (otworz_plik(&in_handle, &argv[1])) {
+	printf("ok");
     } else
-	printf("Blad otwarcie pliku!");
+	error_plik("Poprawne wywolanie: ./main nazwa_pliku");
 
+    zamknij_plik(&in_handle);
 
     return 0;
 }
