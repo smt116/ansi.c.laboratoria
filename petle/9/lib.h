@@ -9,5 +9,6 @@
 
 int otworz_plik(FILE ** in_handle, char *argv[1]);
 void zamknij_plik(FILE ** in_handle);
+void wczytaj_dane(FILE ** in_handle, unsigned *, double *, double *);
 void error_plik(char *);
 #endif

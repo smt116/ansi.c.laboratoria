@@ -14,12 +14,23 @@ int otworz_plik(FILE ** in_handle, char *argv[1]) {
 }
 
 void zamknij_plik(FILE ** in_handle) {
+    /* osobna funkcja jako furtka
+     * do pozniejszej rozbudowy */
     fclose(*in_handle);
 }
 
+void wczytaj_dane(FILE ** in_handle, unsigned *kilometry, double *litry,
+		  double *cena) {
+    char bufor[BUFSIZ];
+
+    while (fgets(bufor, BUFSIZ, *in_handle)) {
+	sscanf(bufor, "%u %lf %lf", kilometry, litry, cena);
+	printf("- %d %.2f %.2f\n", *kilometry, *litry, *cena);
+    }
+}
+
 void error_plik(char *error) {
-    /* osobna funkcja po to zeby potem 
-     * mozna bylo latwo dodac jakies inne
-     * opcje przy bledach wywolania */
+    /* osobna funkcja jako furtka
+     * do pozniejszej rozbudowy */
     printf(error);
 }
