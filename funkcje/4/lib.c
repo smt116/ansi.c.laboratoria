@@ -3,17 +3,25 @@
  * smt116@gmail.com
  */
 #include<stdio.h>
-void pobierz_liczbe(char *liczba[], char *prompt)
+#include<string.h>
+
+void pobierz_liczbe(char *liczba, unsigned *dlugosc, char *prompt)
 {
     printf(prompt);
     scanf("%c", liczba);
+
+	/* to ponizej jest bledne... ale jak to poprawic??..*/
+	*dlugosc = strlen(liczba);
 }
-void drukuj_liczbe_od_tyly(char liczba[], char *prompt)
+
+void drukuj_liczbe_od_tyly(unsigned *dlugosc, char *liczba[*dlugosc], char *prompt)
 {
     unsigned i;
     printf(prompt);
-
-    for (i = 0; i < strlen(liczba); i++) {
-	printf("%c", liczba[i]);
+    
+	for (i = 0; i < *dlugosc; i++) {
+		printf("%c", liczba[i]);
     }
+
+	printf("\n");
 }
