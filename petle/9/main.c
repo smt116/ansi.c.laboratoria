@@ -8,14 +8,12 @@ int main(int argc, char *argv[]) {
     FILE *in_handle;
     unsigned kilometry;
     double litry, cena;
-
-    if (otworz_plik(&in_handle, &argv[1])) {
+    
+    if (otworz_plik(&in_handle, &argc, &argv[1])) {
 	wczytaj_dane(&in_handle, &kilometry, &litry, &cena);
-
-    } else {
-	error_plik("Poprawne wywolanie: ./main nazwa_pliku");
+        
+	zamknij_plik(&in_handle);
     }
-    zamknij_plik(&in_handle);
 
     return 0;
 }

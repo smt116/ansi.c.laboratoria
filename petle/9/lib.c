@@ -4,19 +4,35 @@
  */
 #include "lib.h"
 
-int otworz_plik(FILE ** in_handle, char *argv[1]) {
-    *in_handle = fopen(argv[0], "r");
+int wywolanie(int kod_bledu) {
+    switch(kod_bledu) {
+	case 2: printf("Za duzo argumentow\nPoprawne wywolanie: ./main plik\n",
+				    strerror(errno)); return 0; break;
+	case 1: printf("Plik nieistnieje\n",
+				strerror(errno)); return 0; break;
+	default: return 0;
+    }
+}
 
-    if (*in_handle == NULL) {
+int otworz_plik(FILE ** in_handle, int *argc, char *argv[1]) {
+    *in_handle = fopen(argv[0], "r");
+    if (*argc != 2) {
+	wywolanie(2);
 	return 0;
-    } else
-	return 1;
+    } else {
+	if(*in_handle == NULL) {
+	    wywolanie(1);
+	    return 0;
+	} else {
+	    return 1;
+	}
+    }
 }
 
 void zamknij_plik(FILE ** in_handle) {
     /* osobna funkcja jako furtka
      * do pozniejszej rozbudowy */
-    fclose(*in_handle);
+    fclose(*in_handle);printf("ok");
 }
 
 void wczytaj_dane(FILE ** in_handle, unsigned *kilometry, double *litry,
@@ -29,7 +45,7 @@ void wczytaj_dane(FILE ** in_handle, unsigned *kilometry, double *litry,
 	if(komentarz==3) {
 	    oblicz(*kilometry, *litry, *cena);
 	}
-    }
+    }    
 }
 
 void oblicz(unsigned kilometry, double litry, double cena) {
@@ -42,10 +58,4 @@ void oblicz(unsigned kilometry, double litry, double cena) {
 
     printf("Srednie spalanie: \t%.2f\nSredni koszt: \t\t%.2f\n", 
 		    srednie_spalanie, sredni_koszt);
-}
-
-void error_plik(char *error) {
-    /* osobna funkcja jako furtka
-     * do pozniejszej rozbudowy */
-    printf(error);
 }
