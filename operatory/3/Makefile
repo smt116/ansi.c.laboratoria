@@ -11,5 +11,7 @@ clean:
 	rm -f *~ *.in *.out *.o main ~swp
 
 test: main
-	echo "12345" > 1.in
+	echo "2 6" > 1.in
+	echo "-100 100" > 2.in
 	./main < 1.in
+	./main < 2.in
