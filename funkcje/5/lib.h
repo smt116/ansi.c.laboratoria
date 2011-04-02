@@ -7,8 +7,10 @@
 
 #include <stdio.h>
 
-void rysuj_prostokat();
-void rysuj_owal();
-void rysuj_strzalke();
-void rysuj_diament();
+void wczytaj_wymiary(unsigned *x, unsigned *y, char *prompt);
+
+void rysuj_prostokat(unsigned x, unsigned y);
+void rysuj_owal(unsigned x, unsigned y);
+void rysuj_strzalke(unsigned x, unsigned y);
+void rysuj_diament(unsigned x, unsigned y);
 #endif

@@ -6,6 +6,11 @@
 
 int main()
 {
+	unsigned x, y;
+
+	wczytaj_wymiary(&x, &y, "Podaj wymiary. x y = ");
+	
+	rysuj_prostokat(x, y);
 
     return 0;
 }
