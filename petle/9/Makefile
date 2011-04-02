@@ -1,9 +1,11 @@
 FLAGS = -Wall -ansi
 
-default: main.o lib.o
-	cc -o main main.o lib.o
+default: main.o file.o lib.o
+	cc -o main main.o file.o lib.o
 
 main.o: main.c lib.h
+
+file.o: file.c
 
 lib.o: lib.c
 
