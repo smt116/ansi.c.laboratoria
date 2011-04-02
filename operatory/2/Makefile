@@ -9,4 +9,3 @@ lib.o: lib.c
 
 clean:
 	rm -f *~ *.in *.out *.o main ~swp
-
