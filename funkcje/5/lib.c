@@ -11,8 +11,7 @@ void wczytaj_wymiary(unsigned *x, unsigned *y, char *prompt) {
 }
 
 void rysuj_prostokat(unsigned x, unsigned y) {
-	unsigned wysokosc,
-			szerokosc;
+	unsigned wysokosc, szerokosc;
 
 	for(wysokosc=1 ; wysokosc<=y ; wysokosc++) {
 		for(szerokosc=1 ; szerokosc<=x ; szerokosc++) {
@@ -22,10 +21,22 @@ void rysuj_prostokat(unsigned x, unsigned y) {
 				putchar(' ');
 			}
 		}
-		printf("\n");
+		putchar('\n');
 	}
 }
 
-void rysuj_owal(unsigned x, unsigned y);
+void rysuj_owal(unsigned x, unsigned y) {
+	unsigned wysokosc, szerokosc;
+
+	for(wysokosc=1 ; wysokosc<=y ; wysokosc++) {
+		for(szerokosc=1 ; szerokosc<=x ; szerokosc++) {
+			if(szerokosc<x/2) putchar(' ');
+			else if(szerokosc==x/2) putchar('*');
+		}
+		putchar('\n');
+	}
+}
+
+
 void rysuj_strzalke(unsigned x, unsigned y);
 void rysuj_diament(unsigned x, unsigned y);

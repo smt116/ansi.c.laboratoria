@@ -10,10 +10,10 @@ void wczytaj_dane(FILE ** in_handle, unsigned *kilometry, double *litry,
     short komentarz;
 
     while (fgets(bufor, BUFSIZ, *in_handle)) {
-		komentarz = sscanf(bufor, "%u %lf %lf", kilometry, litry, cena);
-		if (komentarz == 3) {
-	    	oblicz(*kilometry, *litry, *cena);
-		}
+	komentarz = sscanf(bufor, "%u %lf %lf", kilometry, litry, cena);
+	if (komentarz == 3) {
+	    oblicz(*kilometry, *litry, *cena);
+	}
     }
 }
 

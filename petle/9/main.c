@@ -10,9 +10,9 @@ int main(int argc, char *argv[]) {
     double litry, cena;
 
     if (otworz_plik(&in_handle, &argc, &argv[1])) {
-		wczytaj_dane(&in_handle, &kilometry, &litry, &cena);
+	wczytaj_dane(&in_handle, &kilometry, &litry, &cena);
 
-		zamknij_plik(&in_handle);
+	zamknij_plik(&in_handle);
     }
 
     return 0;
