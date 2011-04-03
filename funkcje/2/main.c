@@ -4,7 +4,8 @@
  */
 #include "lib.h"
 
-int main() {
+int main()
+{
     unsigned n;
     //czytaj_dane(&n, "Podaj liczbe calkowita n, n = ");
     //silnia(n, "%u! = %lli\n");

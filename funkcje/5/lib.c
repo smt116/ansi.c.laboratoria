@@ -5,36 +5,37 @@
 
 #include "lib.h"
 
-void wczytaj_wymiary(unsigned *x, unsigned *y, char *prompt) {
-	printf(prompt);
-	scanf("%u %u", x, y);
+void wczytaj_wymiary(unsigned *x, unsigned *y, char *prompt)
+{
+    printf(prompt);
+    scanf("%u %u", x, y);
 }
 
-void rysuj_prostokat(unsigned x, unsigned y) {
-	unsigned wysokosc, szerokosc;
+void rysuj_prostokat(unsigned x, unsigned y)
+{
+    unsigned wysokosc, szerokosc;
 
-	for(wysokosc=1 ; wysokosc<=y ; wysokosc++) {
-		for(szerokosc=1 ; szerokosc<=x ; szerokosc++) {
-			if(szerokosc%x<2 || wysokosc%y<2) {
-				putchar('*');
-			} else {
-				putchar(' ');
-			}
-		}
-		putchar('\n');
+    for (wysokosc = 1; wysokosc <= y; wysokosc++) {
+	for (szerokosc = 1; szerokosc <= x; szerokosc++) {
+	    if (szerokosc % x < 2 || wysokosc % y < 2) {
+		putchar('*');
+	    } else {
+		putchar(' ');
+	    }
 	}
+	putchar('\n');
+    }
 }
 
-void rysuj_owal(unsigned x, unsigned y) {
-	unsigned wysokosc, szerokosc;
+void rysuj_owal(unsigned x, unsigned y)
+{
+    unsigned wysokosc, szerokosc;
 
-	for(wysokosc=1 ; wysokosc<=y ; wysokosc++) {
-		for(szerokosc=1 ; szerokosc<=x ; szerokosc++) {
-			if(szerokosc<x/2) putchar(' ');
-			else if(szerokosc==x/2) putchar('*');
-		}
-		putchar('\n');
+    for (wysokosc = 1; wysokosc <= y; wysokosc++) {
+	for (szerokosc = 1; szerokosc <= x; szerokosc++) {
 	}
+	putchar('\n');
+    }
 }
 
 
