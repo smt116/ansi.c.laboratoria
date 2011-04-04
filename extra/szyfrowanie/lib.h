@@ -8,12 +8,13 @@
 #include <stdio.h>
 
 /* lib.c: */
-void wczytaj_tekst(char *tekst, char *);
-short menu(short sOpcja, char *);
+void wczytaj_tekst(short *, char *);
+short menu(short *, char *);
+void wybor(short, short *, char *);
 
 /* ascii.c: */
-void ascii_na_tekst();
-void tekst_na_ascii();
+void ascii_na_tekst(short *);
+void tekst_na_ascii(short *);
 
 /* czestosc.c:*/
 
