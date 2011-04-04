@@ -33,6 +33,7 @@ void rysuj_owal(unsigned x, unsigned y)
 
     for (wysokosc = 1; wysokosc <= y; wysokosc++) {
 	for (szerokosc = 1; szerokosc <= x; szerokosc++) {
+
 	}
 	putchar('\n');
     }
