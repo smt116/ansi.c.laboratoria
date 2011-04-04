@@ -11,6 +11,7 @@ int main()
     short opcjaMenu;
 
     wczytaj_tekst(tekst, "Podaj tekst wejsciowy: ");
+    wyswietl_tekst(tekst, "\nPodany tekst: \n");
     menu(&opcjaMenu, "Co chcesz zrobic?...");
     wybor(opcjaMenu, tekst, "Blad.");
     return 0;

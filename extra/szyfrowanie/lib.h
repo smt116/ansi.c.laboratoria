@@ -9,12 +9,13 @@
 
 /* lib.c: */
 void wczytaj_tekst(short *, char *);
-short menu(short *, char *);
+void wyswietl_tekst(short *, char *);
+void menu(short *, char *);
 void wybor(short, short *, char *);
 
 /* ascii.c: */
-void ascii_na_tekst(short *);
-void tekst_na_ascii(short *);
+void ascii_na_tekst(short **);
+void tekst_na_ascii(short **);
 
 /* czestosc.c:*/
 
