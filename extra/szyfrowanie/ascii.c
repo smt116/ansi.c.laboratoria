@@ -6,9 +6,8 @@
 
 void ascii_na_tekst(short **tekst)
 {
-    short i;
+    unsigned i = 0;
     do {
-	int i = 0;
 	printf("%c ", (char) *tekst[i]);
 	i++;
     } while (*tekst[i] != EOF);

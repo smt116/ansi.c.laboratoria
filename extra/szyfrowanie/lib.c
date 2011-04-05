@@ -25,22 +25,25 @@ void wyswietl_tekst(short *tekst, char *prompt)
     } while (tekst[i] != EOF);
 }
 
-void menu(short *opcjaMenu, char *prompt)
+short menu(char *prompt)
 {
+    short opcja;
     printf(prompt);
     do {
-	scanf("%hi", opcjaMenu);
-    } while (*opcjaMenu < 0 && *opcjaMenu > 3);
+	scanf("%hi", &opcja);
+    } while (opcja <= 0 && opcja >= 3);
+    
+    return opcja;
 }
 
-void wybor(short opcjaMenu, short *tekst, char *error)
+void wybor(short opcjaMenu, short *tekst, char *error) 
 {
     switch (opcjaMenu) {
     case 1:
-	ascii_na_tekst(&tekst);
+	ascii_na_tekst(&tekst); break;
     case 2:
-	tekst_na_ascii(&tekst);
+	tekst_na_ascii(&tekst); break;
     default:
-	printf(error);
+	printf(error); break;
     }
 }

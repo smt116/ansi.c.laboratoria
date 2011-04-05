@@ -10,7 +10,7 @@
 /* lib.c: */
 void wczytaj_tekst(short *, char *);
 void wyswietl_tekst(short *, char *);
-void menu(short *, char *);
+short menu(char *);
 void wybor(short, short *, char *);
 
 /* ascii.c: */

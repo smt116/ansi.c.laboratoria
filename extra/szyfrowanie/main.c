@@ -12,7 +12,7 @@ int main()
 
     wczytaj_tekst(tekst, "Podaj tekst wejsciowy (EOF konczy procedure): ");
     wyswietl_tekst(tekst, "\nPodany tekst: \n");
-    menu(&opcjaMenu, "Co chcesz zrobic?...");
+    opcjaMenu = menu("Co chcesz zrobic?...");
     wybor(opcjaMenu, tekst, "Blad.");
     return 0;
 }

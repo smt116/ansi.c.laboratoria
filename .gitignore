@@ -4,6 +4,6 @@
 *~
 *.o
 _*
+main
 
-git.bash
 clean.bash
