@@ -6,12 +6,13 @@
 
 void wczytaj_tekst(short *tekst, char *prompt)
 {
-    int i = 0;
+    int i = 0; char znak;
     printf(prompt);
     do {
-	scanf("%hi", tekst[i]);
+	znak = getchar();
+	tekst[i] = (int) znak;
 	i++;
-    } while (tekst[i] != EOF);
+    } while (znak != EOF);
 }
 
 void wyswietl_tekst(short *tekst, char *prompt)
@@ -27,10 +28,9 @@ void wyswietl_tekst(short *tekst, char *prompt)
 void menu(short *opcjaMenu, char *prompt)
 {
     printf(prompt);
-    scanf("%i", opcjaMenu);
     do {
 	scanf("%hi", opcjaMenu);
-    } while (*opcjaMenu > 0 && *opcjaMenu < 3);
+    } while (*opcjaMenu < 0 && *opcjaMenu > 3);
 }
 
 void wybor(short opcjaMenu, short *tekst, char *error)

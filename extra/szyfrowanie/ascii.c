@@ -9,7 +9,7 @@ void ascii_na_tekst(short **tekst)
     short i;
     do {
 	int i = 0;
-	printf("%c", (char) *tekst[i]);
+	printf("%c ", (char) *tekst[i]);
 	i++;
     } while (*tekst[i] != EOF);
 }
