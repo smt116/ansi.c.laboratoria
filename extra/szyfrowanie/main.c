@@ -5,18 +5,18 @@
 #include "lib.h"
 
 int main() {
-    /* na potrzeby testow ograniczona tablica: */
-    short tekst[4096];
-    short opcjaMenu;
+    short tekst[ROZMIAR];
+    /* co uzytkownik chce zrobic: */
+    short opcja;
 
-    wczytaj_tekst(tekst, "Podaj tekst wejsciowy (EOF konczy procedure): ");
-    /* wyswietlanie tekstu do testow - pozniej usune */
+    wczytaj_tekst(tekst, "Podaj tekst wejsciowy (EOF konczy procedure):\n");
     wyswietl_tekst(tekst, "\nPodany tekst: \n");
-    opcjaMenu = menu("Co chcesz zrobic?:\n\t1. Zamien ASCII na tekst\n\t2. Zamien tekst na ASCII\nWybor: ");
+    
+    opcja = wybor_opcji("\nCo chcesz zrobic?:\n\t1. Zamien tekst na ASCII\n\t2. Zlicz ilosc poszczegolonych liter\nWybor: ");
 
-    switch (opcjaMenu) {
-        case 1: ascii_na_tekst(tekst); break;
-        case 2: tekst_na_ascii(tekst); break;
+    switch (opcja) {
+        case 1: tekst_na_ascii(tekst); break;
+	case 2: zlicz_litery(tekst); break;
         default: printf("blad");
     }
     return 0;

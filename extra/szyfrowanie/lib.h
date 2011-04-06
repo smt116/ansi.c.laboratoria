@@ -5,16 +5,18 @@
 #ifndef SMT__LOCAL_LIB
 #define SMT__LOCAL_LIB
 
+#define ROZMIAR 4096
+
 #include <stdio.h>
 
 /* lib.c: */
 void wczytaj_tekst(short *, char *);
 void wyswietl_tekst(short *, char *);
-short menu(char *);
+short wybor_opcji(char *);
 
 /* ascii.c: */
-void ascii_na_tekst(short *);
 void tekst_na_ascii(short *);
+void zlicz_litery(short *);
 
 /* czestosc.c:*/
 

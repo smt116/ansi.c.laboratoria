@@ -26,7 +26,7 @@ void wyswietl_tekst(short *tekst, char *prompt) {
     } while (tekst[i] != EOF);
 }
 
-short menu(char *prompt) {
+short wybor_opcji(char *prompt) {
     short opcja;
     printf(prompt);
 
