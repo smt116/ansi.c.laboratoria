@@ -6,5 +6,5 @@
 #define SMT__LOCAL_LIB
 void pobieranie_tekstu(char *);
 void usun_komentarze(char *);
-void usun_apostrofy(char *);
+void ignoruj_przedzial(char *, char);
 #endif
