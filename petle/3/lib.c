@@ -10,19 +10,21 @@ void wczytaj_dane(int *a, int *b, char *prompt) {
     scanf("%i %i", a, b);
 }
 
-void liczby_w_przedziale(int a, int b, char *prompt, char *nie_ma_liczb) {
+void liczby_w_przedziale(int a, int b, char *liczby_w_przedziale, 
+	char *nie_ma_liczb, char *a_mniejsze_niz_b) {
     int i;
 
-    if (sprawdzenie(a, b)) {
-	printf(prompt, a, b);
-
-	for (i = a + 1; i < b; i++) {
-	    printf("%i ", i);
-	}
-    } else {
-	printf(nie_ma_liczb, a, b);
+    switch(sprawdzenie(a,b)) {
+	case 0: printf(nie_ma_liczb, a, b); break;
+	case 1: 
+	    printf(liczby_w_przedziale);
+	    for(i=a+1 ; i<b ; i++) {
+		printf("%i ", i);
+	    }
+	    break;
+	case 2: printf(a_mniejsze_niz_b, a, b); break;
     }
-    
+
     printf("\n");
 }
 
@@ -30,7 +32,15 @@ void liczby_w_przedziale(int a, int b, char *prompt, char *nie_ma_liczb) {
 int sprawdzenie(int a, int b) {
     int out = 0;
 
-    if (abs(a - b) > 1)	out = 1;
+    if (b-a > 1) {
+	out = 1;
+    } else {
+	if(b-a == 0 || b-a == 1) {
+	    out = 0;
+	} else {
+	    out = 2;
+	}
+    }
 
     return out;
 }
