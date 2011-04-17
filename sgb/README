@@ -1,0 +1,27 @@
+Maciej Małecki
+smt116@gmail.com
+
+
+-- WPROWADZENIE --
+sgb polish ladders - to polska wersja programu stworzonego przez Don'a Knuth'a. Program oparty jest o oryginalny kod zrodlowy ( http://www-cs-faculty.stanford.edu/~uno/sgb.html ). Polski slownik, przygotowany przez dra W. Bzyla mozna znalezc pod tym adresem: git clone git://sigma.ug.edu.pl/~wbzyl/sgb.git
+
+
+-- UWAGA --
+program w obecnej wersji NIEOBSLUGUJE polskich liter!.
+
+
+-- SPOSOB UZYCIA --
+po sciagnieciu wszystkich plikow uruchamiamy skrypt install ( ./install ), ktory rozpakowuje oryginalne archiwum z zrodlem sgb a nastepnie dodaje moje modyfikacje. Program sam dba o strukture folderow. Domyslnie program rozpakuje sie i bedzie dzialal w podfolderze sgb/ (mozna dokonac zmian na poczatku pliku Makefile). Pozniej bedac w folderze sgb/ wpisujemy polecenie 'make polishladders' a nastepnie uruchamiamy program ./polish_ladders
+
+w skrocie:
+./install
+cd sgb
+make polishladders
+./polish_ladders
+
+
+-- LINKI --
+Oryginalny kod zrodlowy:
+http://www-cs-faculty.stanford.edu/~uno/sgb.html
+Slownik:
+git clone git://sigma.ug.edu.pl/~wbzyl/sgb.git

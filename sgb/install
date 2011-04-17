@@ -1,0 +1,11 @@
+#!/bin/bash
+rm -rf sgb/
+mkdir sgb/
+
+cp sgb.tar.gz sgb/.
+cd sgb/
+tar -xvvf sgb.tar.gz
+
+cp ../* .
+rm sgb.tar.gz
+rm install
