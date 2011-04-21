@@ -399,7 +399,7 @@ a single letter of a five-letter word. For example, a word like `\.{words}'
 will lead to entries for `\.{\ ords}', `\.{w\ rds}, `\.{wo\ ds}', `\.{wor\ s}',
 and `\.{word\ }', one in each of the hash tables.
 
-@d hash_prime 5193 /* a prime number larger than the total number of words */
+@d hash_prime 5197 /* a prime number larger than the total number of words */
 
 @<Type...@>=
 typedef Vertex *hash_table[hash_prime];
