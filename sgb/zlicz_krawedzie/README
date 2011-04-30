@@ -1,0 +1,24 @@
+Maciej Małecki
+smt116@gmail.com
+
+Program służy do zliczania krawędzi w grafie nieskierowanym, w którym dwa słowa pięcioliterowe są połączone krawędzią jeżeli różnią się tylko jedną literą. Program obsługuje kodowanie UTF-8 (unicode). Na wejściu należy podać nazwę pliku, który zawiera spis pięcioliterowych słów - każde w nowej linii (postać ccccc\n - gdzie c to jeden znak alfabetu). Komentarze w pliku z słownikiem należy poprzedzić znakiem '*' - te linie zostaną w całości zignorowane. W kodzie została zastosowana tablica dynamiczna dla zwiększenia uniwersalności zastosowania. Do kodu zostały dołączone trzy pliki testowe - plik z słowami z języka angielskiego (zaczerpnięty z sgb, http://www-cs-faculty.stanford.edu/~uno/sgb.html, autor: Donald E. Knuth) oraz pliki z polskimi słowami w ANSI i w UTF (http://sinatra.inf.ug.edu.pl/c/doc/plwords.txt, autor: dr Włodzimierz Bzyl).
+
+
+Sposób użycia:
+./zlicz_krawedzie nazwa_pliku
+
+
+Metody zawarte w pliku Makefile:
+-> make - kompilacja plików *.o oraz proces linkowania do pliku wyjściowego 'main'. Na koniec usunięcie plików *.o
+
+-> make compile - proces linkowania do pliku 'main'
+
+-> make obj - kompilacja plików do postaci *.o
+
+-> make tar - utworzenie archiwum
+
+-> make clean - usunięcie plików *.o oraz plików tymczasowych
+
+-> make veryclean - make clean, ponadto usunięcie pliku 'main' oraz plików *.in oraz *.out (jeżeli istnieją)
+
+-> make test - zliczenie krawędzi grafów w plikach dołączonych do programu
