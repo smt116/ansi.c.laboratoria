@@ -1,27 +1,27 @@
 Maciej Małecki
 smt116@gmail.com
 
+Mateusz Miotk
+miotek32@gmail.com
+
+(projekt zespołowy)
+
 
 -- WPROWADZENIE --
-sgb polish ladders - to polska wersja programu stworzonego przez Don'a Knuth'a. Program oparty jest o oryginalny kod zrodlowy ( http://www-cs-faculty.stanford.edu/~uno/sgb.html ). Polski slownik, przygotowany przez dra W. Bzyla mozna znalezc pod tym adresem: git clone git://sigma.ug.edu.pl/~wbzyl/sgb.git
-
-
--- UWAGA --
-program w obecnej wersji NIEOBSLUGUJE polskich liter!.
+sgb polish ladders - to polska wersja programu stworzonego przez Don'a Knuth'a. Program oparty jest o oryginalny kod zrodlowy ( http://www-cs-faculty.stanford.edu/~uno/sgb.html ). Polski slownik, przygotowany przez dra W. Bzyla mozna znalezc pod tym adresem: http://sinatra.inf.ug.edu.pl/c/doc/plwords.txt (slownik zmodyfikowany - poprawione 4 pierwsze linie (checksum'y))
 
 
 -- SPOSOB UZYCIA --
-po sciagnieciu wszystkich plikow uruchamiamy skrypt install ( ./install ), ktory rozpakowuje oryginalne archiwum z zrodlem sgb a nastepnie dodaje moje modyfikacje. Program sam dba o strukture folderow. Domyslnie program rozpakuje sie i bedzie dzialal w podfolderze sgb/ (mozna dokonac zmian na poczatku pliku Makefile). Pozniej bedac w folderze sgb/ wpisujemy polecenie 'make polishladders' a nastepnie uruchamiamy program ./polish_ladders
-
-w skrocie:
-./install
-cd sgb
-make polishladders
-./polish_ladders
+-> make - kompilacja programu do pliku polish_ladders
+-> make gb - utworzenie biblioteki, z której korzysta program
+-> make test - przetestowanie programu na przykładowych danych wejściowych (najpierw użyj make)
+-> make tar - utworzenie archiwum
+-> make clean - usunięcie plików obiektowych, tymczasowych oraz biblioteki
+-> make veryclean - clean + usunięcie skompilowanego programu oraz plików *.in oraz *.out
 
 
 -- LINKI --
 Oryginalny kod zrodlowy:
 http://www-cs-faculty.stanford.edu/~uno/sgb.html
 Slownik:
-git clone git://sigma.ug.edu.pl/~wbzyl/sgb.git
+http://sinatra.inf.ug.edu.pl/c/doc/plwords.txt
