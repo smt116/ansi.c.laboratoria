@@ -26,6 +26,6 @@
 	void set_lang(void);
 	int otworz_plik(FILE **, int *, char *argv[1]);
 	void zamknij_plik(FILE **);
-	void policz_krawedzie(words *, unsigned *, unsigned);
+	void plwords(words *, unsigned *, unsigned);
 
 #endif

@@ -18,7 +18,6 @@ int main(int argc, char *argv[])
 	set_lang();
 /**/
 	if(otworz_plik(&plik, &argc, &argv[1])) {
-		CZAS_START;
 		while(fgetws(bufor, BUFSIZ, plik)) {
 			swscanf(bufor, L"%5S", tmp.q);
 
@@ -31,7 +30,8 @@ int main(int argc, char *argv[])
 			}
 		}
 /**/
-		policz_krawedzie(tablica, &krawedzi, rekord);
+		CZAS_START
+		plwords(tablica, &krawedzi, rekord);
 		CZAS_STOP;
 
 		wprintf(L"Ilość krawędzi:\t%u\nCzas procesora:\t%ld (%ld sekund)\n", 

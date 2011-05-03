@@ -33,7 +33,7 @@ void zamknij_plik(FILE **plik) {
 	fclose(*plik);
 }
 
-void policz_krawedzie(words *tab, unsigned *vec, unsigned wiersz) {
+void plwords(words *tab, unsigned *vec, unsigned wiersz) {
 	unsigned i, k, p, tmp;
 	wint_t a,b;
 
