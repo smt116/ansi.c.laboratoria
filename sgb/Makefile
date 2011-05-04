@@ -51,11 +51,12 @@ test:
 	@ echo "żyzny\ndurny\nkulać\nkonno" > test.in
 	@ echo
 	./$(PL) < test.in
+	rm -rf test.in
 	make clean
 
 tar: veryclean
 	rm -rf plSGB.tar.gz
-	tar -zcf plSGB.tar.gz ../plSGB/
+	tar -zcf plSGB.tar.gz *
 
 clean:
 	rm -rf *~ *swp .*swp *.a *.o

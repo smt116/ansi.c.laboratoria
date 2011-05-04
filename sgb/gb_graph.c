@@ -23,7 +23,7 @@
 #define hash_head v.V \
 
 #define HASH_MULT 314159
-#define HASH_PRIME 513512678 \
+#define HASH_PRIME 593996012 \
 
 typedef union {
     struct vertex_struct *V;
