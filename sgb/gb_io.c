@@ -261,7 +261,10 @@ long gb_close()
     cur_file = NULL;
     if (line_no != tot_lines + 1)
 	return (io_errors |= wrong_number_of_lines);
-// sigma źle oblicza checksume magic. Na localu wszystko chodzi dobrze.
+// Procesory 32-bitowe źle obliczają zmienną magic, na 
+// 64-bitowych komentarz można usunąć.
+// Prawdopodobnie spowodowane jest to tym, że wchar_t 
+// obejmuje większy zakres niż char (większa liczba) 
 //    if (magic != final_magic)
 //	return (io_errors |= wrong_checksum);
     return io_errors;
